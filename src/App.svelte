@@ -9,9 +9,3 @@
 		how to build Svelte apps.
 	</p>
 </main>
-
-<style lang="postcss" global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-</style>
