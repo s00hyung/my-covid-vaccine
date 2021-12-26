@@ -5,9 +5,6 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 
-import sveltePreprocess from 'svelte-preprocess'
-
-
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -41,12 +38,6 @@ export default {
 	},
 	plugins: [
 		svelte({
-			preprocess: sveltePreprocess({
-				sourceMap: !production,
-				postcss: {
-					plugins: [require('tailwindcss'), require('autoprefixer')()],
-				}
-			}),
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
